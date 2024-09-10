@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 function NavbarComponent() {
     let routers = ['Products', 'About', 'Contact'];
-    let pathName = window.location.pathname.slice(1);
+    // let pathName = window.location.pathname.slice(1);
 
     return (
         <div className='container mx-auto flex items-center justify-between h-[120px]'>
@@ -21,7 +21,7 @@ function NavbarComponent() {
                                 {el}
                             </a> */}
 
-                            <Link to={`/${el.toLowerCase()}`}>{el}</Link>
+                            <NavLink to={`/${el.toLowerCase()}`}>{el}</NavLink>
                         </li>
                     )
                 })}

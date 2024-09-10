@@ -1,9 +1,15 @@
+import { Outlet } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import { useState } from 'react'
 
 import NavbarComponent from './components/NavbarComponent'
-import ProductsPage from './pages/ProductsPage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
+
+// pages
+// import ProductsPage from './pages/ProductsPage'
+// import AboutPage from './pages/AboutPage'
+// import ContactPage from './pages/ContactPage'
 
 import './App.css'
 
@@ -29,6 +35,9 @@ function App() {
       {/* {checkCurrentPage()} */}
 
       {/* STEP 3: RETURN PAGE */}
+      <Outlet />
+
+      <ToastContainer />
     </>
   )
 }
